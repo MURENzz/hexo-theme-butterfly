@@ -11,7 +11,7 @@
 
 nav:
   # Navigation bar logo image
-  logo:
+  logo: /img/e1b70b02-5492-45fd-af5b-682b0b1ff9b3.png
   display_title: true
   # Whether to fix navigation bar
   fixed: false
@@ -21,6 +21,18 @@ menu:
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
+  
+  首页: / || fas fa-home
+  时间轴: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  清单: /list/ ||fa fa-heartbeat 
+  音乐: /music/ || fas fa-music
+  照片: /Gallery/ || fas fa-images
+  电影: /movies/ || fas fa-video
+  友链: /link/ || fas fa-link
+  关于: /about/ || fas fa-heart
+
 
 # --------------------------------------
 # Code Blocks Settings
@@ -32,7 +44,7 @@ code_blocks:
   macStyle: false
   # Code block height limit (unit: px)
   height_limit: false
-  word_wrap: false
+  word_wrap: true
 
   # Toolbar
   copy: true
@@ -45,30 +57,31 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+   fab fa-github: https://github.com/MURENzz || Github || '#24292e'
+   fas fa-envelope: mailto:w996275171@gmail.com || Email || '#4a7dbe'
+   fa-solid fa-user: 996275171 || QQ || '#1E3050'
 
 # --------------------------------------
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: /img/e1b70b02-5492-45fd-af5b-682b0b1ff9b3.png
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: /img/微信图片_20250521005658.jpg
   effect: false
 
 # Disable all banner images
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img:
+default_top_img: /img/微信图片_20250521001506.jpg
 
 # The banner image of index page
-index_img:
+index_img: /img/微信图片_20250521001506.jpg
 
 # The banner image of archive page
-archive_img:
+archive_img: /img/微信图片_20250521001506.jpg
 
 # Note: tag page, not tags page
 tag_img:
@@ -87,7 +100,7 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: false
+footer_img: /img/微信图片_20250521015953.jpg
 
 # Website Background
 # Can set it to color or image url
@@ -95,12 +108,13 @@ background:
 
 cover:
   # Disable the cover or not
-  index_enable: true
+  index_enable: false
   aside_enable: true
   archives_enable: true
   # When cover is not set, the default cover is displayed
   default_cover:
-    # - xxx.jpg
+    # 默认文章封面
+
 
 # Replace Broken Images
 error_img:
@@ -147,7 +161,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -163,7 +177,8 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
-
+    - 你所热爱的&#44;就是你的生活
+    - To love something deeply is to live fully.
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
 # 2: Cover on the right, info on the left
@@ -299,7 +314,7 @@ aside:
     sort: date
     sort_order:
   card_newest_comments:
-    enable: false
+    enable: true
     sort_order:
     limit: 6
     # Unit: mins, save data to localStorage
@@ -450,7 +465,7 @@ busuanzi:
 math:
   # Choose: mathjax, katex
   # Leave it empty if you don't need math
-  use:
+  use: katex 
   per_page: true
   hide_scrollbar: false
 
@@ -501,7 +516,7 @@ search:
 # Share System
 # --------------------------------------
 
-share:
+share: 
   # Choose: sharejs / addtoany
   # Leave it empty if you don't need share
   use: sharejs
