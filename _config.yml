@@ -21,11 +21,6 @@ menu:
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
-  
-  # Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
   首页: / || fas fa-home
   时间轴||fas fa-archive:
      个人: /personal/ || fas fa-archive
@@ -42,7 +37,8 @@ menu:
      碎碎念: /shuoshuo/ || fa fa-paper-plane  #far fa-comment-alt-dots
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
-
+  
+  
 
 # --------------------------------------
 # Code Blocks Settings
@@ -67,10 +63,10 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
+   fa fa-bilibili: https://space.bilibili.com/123655146 || Bilibili || '#fb7299'
+   fa fa-zhihu: https://www.zhihu.com/people/you-ren-a-62-96 || Zhihu || '#0084ff'
    fab fa-github: https://github.com/MURENzz || Github || '#24292e'
    fas fa-envelope: mailto:w996275171@gmail.com || Email || '#4a7dbe'
-   fa-solid fa-user: 996275171 || QQ || '#1E3050'
-
 # --------------------------------------
 # Image Settings
 # --------------------------------------
@@ -85,10 +81,11 @@ avatar:
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img: /img/117165405_p0.png
+default_top_img: /img/117165405_p1.webp
+#/img/微信图片_20250521015953.jpg
 
 # The banner image of index page
-index_img: /img/117165405_p0.png
+index_img: /img/117165405_p1.webp
 #/img/微信图片_20250521001506.jpg
 
 # The banner image of archive page
@@ -111,12 +108,13 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: /img/117165405_p0.png
+footer_img: /img/117165405_p1.webp
 #/img/微信图片_20250521015953.jpg
 
 # Website Background
 # Can set it to color or image url
-background: /img/117165405_p0.png
+background: /img/微信图片_20250521005645.jpg
+#/img/117165405_p0.png
 
 cover:
   # Disable the cover or not
@@ -135,7 +133,7 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
+  enable: true
   subtitle: 'Page Not Found'
   background: /img/error-page.png
 
@@ -189,6 +187,11 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+   - 何人忆&#44;长安雪
+   - 春不许&#44;再回头
+   - 你所热爱的&#44;就是你的生活
+   - To love something deeply is to live fully.
+   
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
 # 2: Cover on the right, info on the left
@@ -287,9 +290,9 @@ footer:
     since: 2025
   # Copyright of theme and framework
   copyright:
-    enable: true
-    version: true
-  custom_text:
+    enable: false
+    version: false
+  custom_text: 
 
 # --------------------------------------
 # Aside Settings
@@ -317,7 +320,11 @@ aside:
       link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: > 
+      🏠主域名:<a href='https://blog.murenzzz.top' target='_blank' rel='noopener noreferrer'>https://blog.murenzzz.top</a>
+      <br>📂副域名:<a href='https://20051129.xyz' target='_blank' rel='noopener noreferrer'>https://20051129.xyz</a> 
+      <br>-<span style="color: #c94c4c;">对没错,是生日，望周知（（</span><br>
+      🛠️备用域名:<a href='https://muren.netlify.app' target='_blank' rel='noopener noreferrer'>https://muren.netlify.app</a> 
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -376,7 +383,7 @@ aside:
     # Time difference between publish date and now
     # Formal: Month/Day/Year Time or Year/Month/Day Time
     # Leave it empty if you don't enable this feature
-    runtime_date:
+    runtime_date: 2025/5/20 12:00
 
 # --------------------------------------
 # Bottom right button
@@ -474,10 +481,12 @@ busuanzi:
 # About the per_page
 # if you set it to true, it will load mathjax/katex script in each page
 # if you set it to false, it will load mathjax/katex script according to your setting (add the 'mathjax: true' or 'katex: true' in page's front-matter)
+
+
 math:
   # Choose: mathjax, katex
   # Leave it empty if you don't need math
-  use: katex 
+  use: 
   per_page: true
   hide_scrollbar: false
 
@@ -491,6 +500,14 @@ math:
     # Enable the copy KaTeX formula
     copy_tex: false
 
+#替换了markdown编译器
+#npm uninstall hexo-renderer-marked
+#npm install hexo-renderer-markdown-it --save
+
+# markdown_it_plus:
+#   enable: true
+#   math: true
+
 # --------------------------------------
 # Search
 # --------------------------------------
@@ -498,11 +515,11 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
-  placeholder:
+  use: algolia_search
+  placeholder: 请输入关键词
 
   # Algolia Search
-  algolia_search:
+  algolia_search: 
     # Number of search results per page
     hitsPerPage: 6
 
@@ -552,12 +569,12 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use:
+  use: Twikoo
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
+  lazyload: true
   # Display comment count in post's top_img
   count: false
   # Display comment count in Home Page
@@ -640,8 +657,8 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId:
-  region:
+  envId: https://murenzzz-twikoo.netlify.app/.netlify/functions/twikoo
+  region: 
   # Use Twikoo visitor count as the page view count
   visitor: false
   option:
@@ -811,13 +828,13 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url:
+  pace_css_url: https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css
 
 # Page Transition
 enter_transitions: true
@@ -886,7 +903,7 @@ canvas_fluttering_ribbon:
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: false
+  enable: true
   # Color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   color: '0,0,255'
   # The opacity of line (0~1)
@@ -894,7 +911,7 @@ canvas_nest:
   # The z-index property of the background
   zIndex: -1
   # The number of lines
-  count: 99
+  count: 50
   mobile: false
 
 # Mouse click effects: fireworks
@@ -910,11 +927,12 @@ click_heart:
 
 # Mouse click effects: words
 clickShowText:
-  enable: false
+  enable: true
   text:
-    # - I
-    # - LOVE
-    # - YOU
+     - I
+     - LOVE
+     - YOU
+     - SO
   fontSize: 15px
   random: false
   mobile: false
@@ -927,7 +945,7 @@ clickShowText:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox:
+lightbox: fancybox
 
 # --------------------------------------
 # Tag Plugins settings
@@ -998,7 +1016,7 @@ note:
 
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   # Exclude the specified pages from pjax, such as '/music/'
   exclude:
     # - /xxxxxx/
@@ -1012,7 +1030,7 @@ aplayerInject:
 # https://github.com/polonel/SnackBar
 # position: top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
+  enable: true
   position: bottom-left
   # The background color of Toast Notification in light mode and dark mode
   bg_light: '#49b1f5'
@@ -1020,16 +1038,16 @@ snackbar:
 
 # Instant.page
 # https://instant.page/
-instantpage: false
+instantpage: true
 
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
+  enable: true
   # Specify the field to use lazyload (site or post)
   field: site
   placeholder:
-  blur: false
+  blur: true
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -1066,8 +1084,13 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <meta name="baidu-site-verification" content="codeva-AqdI4GzpsF" />
+    
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
+    - <canvas id="snow"></canvas> # 雪花画布
+    - <script async src="/js/snow.js"></script> # 雪花特效
     # - <script src="xxxx"></script>
 
 # CDN Settings
@@ -1085,7 +1108,7 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format:
+  custom_format:  
 
   option:
     # abcjs_basic_js:
