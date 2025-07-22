@@ -143,6 +143,8 @@ meting_js:
   file: metingjs/dist/Meting.min.js
   version: 1.1.4
 pace_default_css:
+  #name: pace-js
+  #other_name: pace
   name: pace-js
   other_name: pace
   file: themes/blue/pace-theme-minimal.css

@@ -581,7 +581,8 @@ hexo.extend.filter.register('before_generate', () => {
     },
     CDN: {
       internal_provider: 'local',
-      third_party_provider: 'jsdelivr',
+    //  third_party_provider: 'jsdelivr',
+      third_party_provider: 'cdnjs_mirrors',
       version: false,
       custom_format: null,
       option: null
